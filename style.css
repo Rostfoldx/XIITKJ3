@@ -20,7 +20,7 @@ body {
   --bs-gutter-x: none;
 }
 /* Media Query Phone*/
-@media (width <= 780px) {
+@media (width <= 850px) {
   .container-fluid {
     padding: 0;
     margin: 0;
@@ -32,7 +32,7 @@ body {
   }
   #paragrap {
     flex-wrap: wrap;
-    width: 17rem;
+    width: 30rem;
     display: flex;
     margin-left: 4.7rem;
     display: flex;
