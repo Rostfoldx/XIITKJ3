@@ -28,19 +28,22 @@ body {
     overflow-y: scroll;
   }
   .container-fluid a.navbar-brand {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
   #paragrap {
     flex-wrap: wrap;
     width: 17rem;
     display: flex;
     margin-left: 4.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #paragrap img {
     width: 150px;
     flex-wrap: wrap;
     position: relative;
-    margin-right: 350px;
+    margin-right: 450px;
   }
 
   #walas {
