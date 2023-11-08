@@ -37,8 +37,10 @@ body {
     margin-left: 4.7rem;
   }
   #paragrap img {
+    width: 1rem;
+    flex-wrap: wrap;
     position: relative;
-    margin-right: 2rem;
+    margin-right: 5rem;
   }
 
   #walas {
