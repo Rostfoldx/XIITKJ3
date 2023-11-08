@@ -26,6 +26,8 @@ body {
   .container-fluid {
     padding: 0;
     margin: 0;
+    overflow-y: scroll;
+    touch-action: pan-y;
   }
   #paragrap {
     flex-wrap: wrap;
