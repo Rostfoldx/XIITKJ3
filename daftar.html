@@ -1,582 +1,766 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEKAJE 3</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/4beea4e20e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.4.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
     />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-
-<body style="background-color: white;">
-    <!-- NAvBar Start -->
-    <!-- <div class="scrollable"> -->
-        <div class="container-max-width">
-            <nav class="navbar bg-dark position-fixed w-100 z-3 shadow p-3 mb-5 bg-body-tertiary top-0" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand ms-2">  TEKNIK KOMPUTER JARINGAN 3</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav ms-4">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://instagram.com/teknikthree.zie" target="_blank">Instagram</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="daftar.html">Daftar Murid</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Contact Editor
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="https://instagram.com/rifaaziz23" target="_blank">Instagram</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="https://facebook.com/rifa.bestrong" target="_blank">Facebook</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="https://wa.me/+6283817388583" target="_blank">Whatsapp</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.1/dist/cdn.min.js"
+    ></script>
+    <title>TEKAJE 3</title>
+  </head>
+  <body>
+    <div class="container h-full w-full justify-center items-center">
+      <!-- NAvBAr Start -->
+      <div
+        x-data="{ open: false }"
+        class="navbar bg-slate-900 shadow-md fixed w-full top-0 z-50"
+      >
+        <div
+          class="text-white container mx-auto flex justify-between items-center p-4"
+        >
+          <div class="p-2 rounded font-semibold text-xl">
+            <span>TEKNIK KOMPUTER JARINGAN 3</span>
+          </div>
+          <button @click="open = !open" class="lg:hidden text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+          <div class="hidden lg:flex">
+            <ul class="lg:flex space-x-4 mr-5">
+              <li>
+                <a
+                  class="text-white font-semibold hover:text-black active:underline"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-white font-semibold hover:text-black active:underline"
+                  href="#"
+                  >Daftar Murid</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-white font-semibold hover:text-black active:underline"
+                  href="https://instagram.com/teknikthree.zie"
+                  target="_blank"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-    <!-- </div> -->
-    <!-- NavBar END -->
-    <!-- Content 1 Start -->
-    <div class="container text-center" id="judul">
-        <h1> DAFTAR MURID KELAS XII TKJ 3</h1>
-        <div class="row">
-            <div class="col">
-                <img src="./image/adinda.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoAdinda.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Adinda Permana Putri</dd>
-
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 29 Mei 2006</dd>
-
-                    <dt>Sekolah Asal</dt>
-                    <dd>SMPN 15 Sukabumi</dd>
-
-                    <!-- <dt>Motto hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="col">
-                <img src="./image/afriza.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoAfriza.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Afriza Hendriana Setiawan</dd>
-
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 27 April 2005</dd>
-
-                    <dt>Sekolah Asal</dt>
-                    <dd>SMPN 1 Warungkondang</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="col">
-                <img src="./image/ahmad.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoAhmad.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Ahmad Faris Nasrulloh</dd>
-
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 7 Desember 2005</dd>
-
-                    <dt>Sekolah Asal</dt>
-                    <dd>SMP Islam Al 'ianah</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="col">
-                <img src="./image/alwan.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoAlwan.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Alwan Maulana Maulana Sidik</dd>
-
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 12 Februari 2006</dd>
-
-                    <dt>Sekolah Asal</dt>
-                    <dd>SMPN 2 Karangtengah</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="row">
-                <div class="col">
-                    <img src="./image/cita.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoCita.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Cita Lisyana Agisna</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 12 Juli 2005</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>MTsN 6 Cianjur</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-                </div>
-                <div class="col">
-                    <img src="./image/dendi.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoDendi.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Dendi Faisal</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 30 Maret 2006</dd>
-
-                        <dt>Asal Sekolah</dt>
-                        <dd>SMPN 3 Cianjur</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-                </div>
-                <div class="col">
-                    <img src="./image/fazri.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoFazri.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Fazri Aditias Setiawan</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 30 September 2005</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>MTs Al Mansyuriah</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-                </div>
-                <div class="col">
-                    <img src="./image/harly.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoHarly.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Harly Septiadi Rustandi</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 11 September 2005</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>SMPN 1 Cianjur</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-
-                </div>
-            </div>
+        <div x-show="open" class="lg:hidden">
+          <ul
+            class="bg-slate-400 p-4 justify-center items-center flex flex-col gap-2"
+          >
+            <li class="">
+              <a
+                class="text-black font-semibold hover:underline"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="text-black font-semibold hover:underline" href="#"
+                >Daftar Murid</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-black font-semibold hover:underline"
+                href="https://instagram.com/teknikthree.zie"
+                target="_blank"
+                >Instagram</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="row">
-            <div class="col">
-                <img src="./image/radza.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoRadza.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Insan Radza Hadis</dd>
+      </div>
+      <!-- NavBar End -->
+      <!-- Main Content Start -->
+      <div
+        class="text-3xl font-bold mt-32 mb-12 justify-center items-center flex flex-col"
+      >
+        <h1>DAFTAR MURID</h1>
+        <h1>KELAS <span class="text-gray-600"> XII TKJ 3</span></h1>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center pt-1 gap-y-20 gap-x-4"
+      >
+        <!-- Adinda -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/adinda.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoAdinda.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Adinda Permana Putri</dd>
 
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 28 Desember 2005</dd>
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 29 Mei 2006</dd>
 
-                    <dt>Sekolah Asal</dt>
-                    <dd>SMPN 1 Cianjur</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="col">
-                <img src="./image/matharie.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                    alt="inifotoMatharie.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Matharie Daifalah</dd>
-
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 29 Maret 2006</dd>
-
-                    <dt>Sekolah Asal</dt>
-                    <dd>SMPN 4 Karangtengah</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="col">
-                <img src="./image/mira.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoMira.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Mira Andriyani</dd>
-
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 3 November 2005</dd>
-
-                    <dt>Sekolah Asal</dt>
-                    <dd>SMPN 2 Karangtengah</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="col">
-                <img src="./image/mochaziz.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoAziz.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Moch Aziz Dzulfiqar</dd>
-
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 7 Agustus 2006</dd>
-
-                    <dt>Sekolah Asal</dt>
-                    <dd>SMPN 2 Cianjur</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="row">
-                <div class="col">
-                    <img src="./image/daffin.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoDaffin.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Moch Daffin Ramadhan</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 24 Oktober 2005</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>SMP AL Ma'moen</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-                </div>
-                <div class="col">
-                    <img src="./image/fahmi.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoFahmi.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Moch Fahmi Sifran Ramadhan</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 28 Oktober 2005</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>SMPN 4 CIANJUR</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-                </div>
-                <div class="col">
-                    <img src="./image/fajar.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoFajar.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Muhammad Fajar Pangestu</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 10 November 2005</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>SMPN 4 Cianjur</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-                </div>
-                <div class="col">
-                    <img src="./image/nazril.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoNazril.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Muhammad Nazril Mahmud</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 25 Desember 2005</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>SMPN 5 Cianjur</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-
-                </div>
-            </div>
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 15 Sukabumi</dd>
+          </dl>
         </div>
-        <div class="row">
-            <div class="col">
-                <img src="./image/fadil.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoFadil.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Muhammad Fadhil Rifki Alarik</dd>
+        <!-- Afriza -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/afriza.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoAfriza.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Afriza Hendriana Setiawan</dd>
 
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 15 Januari 2006</dd>
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 27 April 2005</dd>
 
-                    <dt>Sekolah Asal</dt>
-                    <dd>SMPN 2 Karangtengah</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="col">
-                <img src="./image/faris.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoFaris.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Muhammad Faris</dd>
-
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 20 Februari 2006</dd>
-
-                    <dt>Sekolah Asal</dt>
-                    <dd>SMPN 1 Cianjur</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="col">
-                <img src="./image/haikal.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoHaikal.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Muhammad Haikal Yunus</dd>
-
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 2 Agustus 2006</dd>
-
-                    <dt>Asal Sekolah</dt>
-                    <dd>SMPN 1 Cianjur</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="col">
-                <img src="./image/rifa.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoRifa.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Muhammad Rifa Maulana Aziz</dd>
-
-                    <dt>TTL</dt>
-                    <dd>Subang, 23 April 2005</dd>
-
-                    <dt>Asal Sekolah</dt>
-                    <dd>SMPN 2 Cianjur</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="row">
-                <div class="col">
-                    <img src="./image/rizkyf.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoRizkyf.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Muhammad Rizky Fadilah</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 29 Juli 2005</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>MTs IT Miftahussaadah</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-                </div>
-                <div class="col">
-                    <img src="./image/nazwa.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoNazwa.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Nazwa Siti Andriana Putri</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 8 April 2006</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>MtsN 6 Cianjur</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-                </div>
-                <div class="col">
-                    <img src="./image/radit.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoRadit.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Raditya Putra Alfatur Rizky</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 9 Juli 2005</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>SMPN 1 Cugenang</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-                </div>
-                <div class="col">
-                    <img src="./image/rafli.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoRafli.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Rafli Firman Mawali</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 3 April 2006</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>SMPN 5 Cianjur</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-
-                </div>
-            </div>
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 1 Warungkondang</dd>
+          </dl>
         </div>
-        <div class="row">
-            <div class="col">
-                <img src="./image/rahma.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoRahma.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Rahmawati</dd>
+        <!-- Ahmad Faris -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/ahmad.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoAhmad.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Ahmad Faris Nasrulloh</dd>
 
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 22 Oktober 2005</dd>
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 7 Desember 2005</dd>
 
-                    <dt>Sekolah Asal</dt>
-                    <dd>SMPN 3 Cianjur</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="col">
-                <img src="./image/rizha.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoRizha.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Rizha Cahyadi Akbar</dd>
-
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 1 April 2005</dd>
-
-                    <dt>Sekolah Asal</dt>
-                    <dd>SMPN 1 Cianjur</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="col">
-                <img src="./image/rizkym.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoRizkyM.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Rizky Maulana Ramadhan</dd>
-
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 21 Oktober 2005</dd>
-
-                    <dt>Sekolah Asal</dt>
-                    <dd>SMPN 2 Cianjur</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="col">
-                <img src="./image/sanji.jpg" class="shadow-lg rounded float-left m-3" width="200px" alt="inifotoSanji.jpg" />
-                <dl>
-                    <dt>Nama Lengkap</dt>
-                    <dd>Sanji Ahmad Fahreji</dd>
-
-                    <dt>TTL</dt>
-                    <dd>Cianjur, 11 Agustus 2005</dd>
-
-                    <dt>Sekolah Asal</dt>
-                    <dd>MtsN 6 Cianjur</dd>
-
-                    <!-- <dt>Motto Hidup</dt>
-                    <dd>-</dd> -->
-            </div>
-            <div class="row">
-                <div class="col">
-                    <img src="./image/selpi.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoSelpi.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Selpi Siti Rohmah</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 9 Maret 2006</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>SMPN 1 Warungkondang</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-                </div>
-                <div class="col">
-                    <img src="./image/sherina.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoSherina.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Sherina RefinaCahyadi</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 16 September 2005</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>SMPN 4 Cianjur</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-                </div>
-                <div class="col">
-                    <img src="./image/tegar.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoTegar.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Tegar Gian Pamungkas</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Cianjur, 1 April 2005</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>MtsN 6 Cianjur</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-                </div>
-                <div class="col">
-                    <img src="./image/zahra.jpg" class="shadow-lg rounded float-left m-3" width="200px"
-                        alt="inifotoZahra.jpg" />
-                    <dl>
-                        <dt>Nama Lengkap</dt>
-                        <dd>Zahra Syahida</dd>
-
-                        <dt>TTL</dt>
-                        <dd>Bandung, 24 Desember 2005</dd>
-
-                        <dt>Sekolah Asal</dt>
-                        <dd>SMPN 1 Karangtengah</dd>
-
-                        <!-- <dt>Motto Hidup</dt>
-                        <dd>-</dd> -->
-
-                </div>
-            </div>
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMP Islam Al 'ianah</dd>
+          </dl>
         </div>
+        <!-- Alwan -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/alwan.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoAlwan.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Alwan Maulana Maulana Sidiq</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 12 Februari 2006</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 2 Karangtengah</dd>
+          </dl>
+        </div>
+        <!-- Cita -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/cita.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoCita.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Cita Lisyana Agisna</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 12 Juli 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">MTsN 6 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- dendi -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/dendi.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoDendi.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Dendi Faisal</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 30 Maret 2006</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 3 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- fazri -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/fazri.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoFazri.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Fazri Aditias Setiawan</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 30 September 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">MTs Al Mansyuriah</dd>
+          </dl>
+        </div>
+        <!-- harly -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/harly.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoHarly.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Harly Septiadi Rustandi</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 11 September 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 1 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- radza -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/radza.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoRadza.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Insan Radza Hadis</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 28 Desember 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 1 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- matharie -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/matharie.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoMatharie.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Matharie Da'ifalah</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 29 Maret 2006</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 4 Karangtengah</dd>
+          </dl>
+        </div>
+        <!-- mira -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/mira.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoMira.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Mira Andriyani</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 3 November 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 2 Karangtengah</dd>
+          </dl>
+        </div>
+        <!-- aziz -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/mochaziz.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoAziz.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Moch Aziz Dzulfiqar</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 7 Agustus 2006</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 2 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- daffin -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/daffin.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoDaffin.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Moch Daffin Ramadhan</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 24 Oktober 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMP AL Ma'moen</dd>
+          </dl>
+        </div>
+        <!-- fahmi -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/fahmi.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoFahmi.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Moch Fahmi Sifran Ramadhan</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 28 Oktober 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 4 CIANJUR</dd>
+          </dl>
+        </div>
+        <!-- fajar -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/fajar.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoFajar.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Muhammad Fajar Pangestu</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 10 November 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 4 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- nazril -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/nazril.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoNazril.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Muhammad Nazril Mahmud</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 25 Desember 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 5 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- fadil -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/fadil.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoFadil.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Muhammad Fadhil Rifki Alarik</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 15 Januari 2006</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 2 Karangtengah</dd>
+          </dl>
+        </div>
+        <!-- faris -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/faris.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoFaris.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Muhammad Faris</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 20 Februari 2006</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 1 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- haikal -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/haikal.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoHaikal.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Muhammad Haikal Yunus</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 2 Agustus 2006</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 1 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- rifa -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/rifa.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoRifa.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Muhammad Rifa Maulana Aziz</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Subang, 23 April 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 2 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- rizkyf -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/rizkyf.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoRizkyF.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Muhammad Rizky Fadilah</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 29 Juli 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">MTs IT Miftahussaadah</dd>
+          </dl>
+        </div>
+        <!-- nazwa -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/nazwa.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoNazwa.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Nazwa Siti Andriana Putri</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 8 April 2006</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">MtsN 6 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- radit -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/radit.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoRadit.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Raditya Putra Alfatur Rizky</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 9 Juli 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 1 Cugenang</dd>
+          </dl>
+        </div>
+        <!-- rafli -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/rafli.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoRafli.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Rafli Firman Mawali</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 3 April 2006</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 5 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- rahma -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/rahma.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoRahma.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Rahmawati</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 22 Oktober 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 3 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- rizha -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/rizha.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoRizha.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Rizha Cahyadi Akbar</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 1 April 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 1 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- rizkym -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/rizkym.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoRizkyM.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Rizky Maulana Ramadhan</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 21 Oktober 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 2 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- sanji -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/sanji.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoSanji.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Sanji Ahmad Fahreji</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 11 Agustus 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">MtsN 6 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- selpi -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/selpi.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoSelpi.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Selpi Siti Rohmah</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 9 Maret 2006</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 1 Warungkondang</dd>
+          </dl>
+        </div>
+        <!-- sherina -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/sherina.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoSherina.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Sherina RefinaCahyadi</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 16 September 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 4 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- tegar -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/tegar.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoTegar.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Tegar Gian Pamungkas</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Cianjur, 1 April 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">MtsN 6 Cianjur</dd>
+          </dl>
+        </div>
+        <!-- zahra -->
+        <div
+          class="bg-white p-5 shadow-lg justify-center items-center border-[3px] border-black"
+        >
+          <img
+            src="./img/zahra.jpg"
+            class="shadow-lg rounded float-left m-3 w-52"
+            alt="inifotoZahra.jpg"
+          />
+          <dl class="mt-7">
+            <dt class="font-bold">Nama Lengkap</dt>
+            <dd class="font-semibold">Zahra Syahida</dd>
+
+            <dt class="font-bold">TTL</dt>
+            <dd class="font-semibold">Bandung, 24 Desember 2005</dd>
+
+            <dt class="font-bold">Sekolah Asal</dt>
+            <dd class="font-semibold">SMPN 1 Karangtengah</dd>
+          </dl>
+        </div>
+      </div>
+      <!-- Main Content End -->
+      <footer
+        class="bg-slate-900 text-white p-3 justify-center items-center flex mt-5"
+      >
+        <p class="font-medium">Copyright XII TKJ 3 © 2023</p>
+      </footer>
     </div>
-    <!-- Content 1 END -->
-
-
-    <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
-
+  </body>
 </html>
