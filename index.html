@@ -25,7 +25,7 @@
       <!-- NAvBAr Start -->
       <div
         x-data="{ open: false }"
-        class="navbar bg-slate-900 shadow-md fixed w-full top-0 z-50"
+        class="navbar bg-slate-900 shadow-md flex flex-col items-center justify-center fixed w-full top-0 z-50"
       >
         <div
           class="text-white container mx-auto flex justify-between items-center p-4"
@@ -76,25 +76,25 @@
             </ul>
           </div>
         </div>
-        <div x-show="open" class="lg:hidden">
+        <div x-show="open" class="lg:hidden justify-center items-center flex">
           <ul
-            class="bg-slate-400 p-4 justify-center items-center flex flex-col gap-2"
+            class="justify-center items-center text-center flex flex-col w-full h-full"
           >
-            <li class="">
-              <a class="text-black font-semibold hover:underline" href="#"
+            <li class="hover:bg-slate-400 px-72 py-5">
+              <a class="text-white font-semibold hover:underline" href="#"
                 >Home</a
               >
             </li>
-            <li>
+            <li class="hover:bg-slate-400 px-72 py-5">
               <a
-                class="text-black font-semibold hover:underline"
+                class="text-white font-semibold whitespace-nowrap hover:underline"
                 href="daftar.html"
                 >Daftar Murid</a
               >
             </li>
-            <li>
+            <li class="hover:bg-slate-400 px-72 py-5">
               <a
-                class="text-black font-semibold hover:underline"
+                class="text-white font-semibold hover:underline"
                 href="https://instagram.com/teknikthree.zie"
                 target="_blank"
                 >Instagram</a
