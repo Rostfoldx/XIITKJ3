@@ -20,7 +20,7 @@
     ></script>
     <title>TEKAJE 3</title>
   </head>
-  <body class="bg-slate-300">
+  <body">
     <div class="container h-full w-full">
       <!-- NAvBAr Start -->
       <div
@@ -53,7 +53,7 @@
             <ul class="lg:flex space-x-4 mr-5">
               <li>
                 <a
-                  class="text-white font-semibold hover:text-slate-400 active:underline"
+                  class="bg-red-500 p-3 rounded-sm text-white font-semibold hover:text-slate-400 active:underline"
                   href="#"
                   >Home</a
                 >
@@ -105,10 +105,17 @@
       </div>
       <!-- NavBar End -->
       <!-- Main Content Start -->
-      <div class="flex flex-col pt-[8rem] w-full justify-center items-center">
+      <div
+        class="flex flex-col text-white pt-[8rem] w-full bg-[url('./img/smakzie1.jpg')]  justify-center items-center bg-no-repeat lg:bg-[center_top_-17rem] bg-center bg-cover"
+      >
         <img
-          src="./img/tkj3.jpg"
-          class="rounded-full w-72 justify-center items-center"
+          src="./img/tkj3b.png"
+          class=" w-72 justify-center items-center lg:hidden"
+          alt="tekaje3"
+        />
+        <img
+          src="./img/tkj3a.png"
+          class=" w-72 justify-center items-center hidden lg:block"
           alt="tekaje3"
         />
         <h1 class="font-bold text-3xl pt-4 text-center">
@@ -135,15 +142,8 @@
       </div>
       <!-- Main Content End -->
       <!-- Secondary Content Start -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#94a3b8"
-          fill-opacity="2"
-          d="M0,224L48,202.7C96,181,192,139,288,117.3C384,96,480,96,576,128C672,160,768,224,864,224C960,224,1056,160,1152,165.3C1248,171,1344,245,1392,282.7L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-      <div class="justify-center items-center flex flex-col bg-slate-400 pt-20">
-        <a href="#" class="font-bold text-3xl">MEMORIES OF XII TKJ 3</a>
+      <div class="justify-center items-center flex flex-col bg-slate-400 pt-20 pb-20">
+        <a href="#" class="font-bold text-3xl">OUR MEMORIES</a>
         <div class="carousel w-full pt-3">
           <div id="item1" class="carousel-item w-full">
             <img src="./img/cs-1.jpg" class="w-full" />
@@ -178,16 +178,9 @@
         </blockquote>
         <figcaption class="text-xs">XII TKJ 3</figcaption>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#94a3b8"
-          fill-opacity="1"
-          d="M0,224L48,224C96,224,192,224,288,192C384,160,480,96,576,90.7C672,85,768,139,864,154.7C960,171,1056,149,1152,165.3C1248,181,1344,235,1392,261.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-        ></path>
-      </svg>
       <!-- Secondary Content End -->
       <!-- Third Content Start -->
-      <div class="pt-40 justify-center items-center flex flex-col">
+      <div class="pt-40 justify-center items-center flex flex-col bg-no-repeat bg-cover bg-[url('./img/ll.jpg')] ">
         <h1 class="font-bold text-3xl pb-16">STRUKTUR ORGANIGRAM</h1>
         <div
           class="justify-center items-center flex flex-col bg-white p-10 rounded-lg mb-11 shadow-lg border-[3px] border-black"
